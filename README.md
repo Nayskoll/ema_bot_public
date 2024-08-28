@@ -14,36 +14,33 @@ This repository contains a Python-based trading bot that implements an Exponenti
 - **Real-time Trading**: Capable of executing trades in real-time using live market data (when connected to a supported API).
 - **Risk Management**: Implements basic risk management strategies, including stop-loss and take-profit levels.
 
-## Technical Indicators and Their Mathematical Formulas
+## Technical Indicators Formulas
 
 ### 1. Exponential Moving Average (EMA)
 
 The EMA is a type of moving average that gives more weight to recent prices, making it more responsive to new information.
 
 **Formula**:
-$$
-EMA_t = \alpha \times P_t + (1 - \alpha) \times EMA_{t-1}
-$$
+$$EMA_t = \alpha \times P_t + (1 - \alpha) \times EMA_{t-1}$$
+
 where:
-- \(P_t\) is the price at time \(t\),
-- \(\alpha = \frac{2}{N + 1}\) is the smoothing factor,
-- \(N\) is the number of periods.
+- $$P_t$$ is the price at time $$t$$,
+- $$\alpha = \frac{2}{N + 1}$$ is the smoothing factor,
+- $$N$$ is the number of periods
 
 ### 2. Average True Range (ATR)
 
 The Average True Range (ATR) is a volatility indicator that measures the degree of price fluctuation in a given period.
 
 **Formula**:
-$$
-ATR = \frac{1}{n} \sum_{i=1}^{n} TR_i
-$$
-where \(TR\) (True Range) is the maximum of the following:
-$$
-TR = \max[(H - L), |H - C_{\text{previous}}|, |L - C_{\text{previous}}|]
-$$
-- \(H\) is the high of the current period,
-- \(L\) is the low of the current period,
-- \(C_{\text{previous}}\) is the close of the previous period.
+$$ATR = \frac{1}{n} \sum_{i=1}^{n} TR_i$$
+
+where $$TR$$ (True Range) is the maximum of the following:
+$$TR = \max[(H - L), |H - C_{\text{previous}}|, |L - C_{\text{previous}}|]$$
+
+- $$H$$ is the high of the current period,
+- $$L$$ is the low of the current period,
+- $$C_{\text{previous}}$$ is the close of the previous period
 
 ## Project Structure
 
